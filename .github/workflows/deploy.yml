@@ -48,16 +48,16 @@ jobs:
     needs: [compile-assets, test-php]
     if: github.ref == 'refs/heads/master'
     steps:
-      - uses: actions/checkout@v2
-      - name: Download build assets
-        uses: actions/download-artifact@v1
-        with:
-          name: assets
-          path: public
+      # - uses: actions/checkout@v2
+      # - name: Download build assets
+      #   uses: actions/download-artifact@v1
+      #   with:
+      #     name: assets
+      #     path: public
       - name: Setup PHP
         uses: shivammathur/setup-php@master
         with:
-          php-version: 7.3
+          php-version: 7.4
           extensions: mbstring, bmath
       - name: Composer install
         run: composer install
