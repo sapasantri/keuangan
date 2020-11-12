@@ -38,7 +38,7 @@ host('production.app.com') // Name of the server
     ->hostname('http://103.153.2.159') // Hostname or IP address
     ->stage('production') // Deployment stage (production, staging, etc)
     ->user('deployer') // SSH user
-    ->set('deploy_path', '/var/www') // Deploy path
+    ->set('deploy_path', '/var/www/keuangan') // Deploy path
     ->set('http_user', 'www-data');
 
 after('deploy:failed', 'deploy:unlock'); // Unlock after failed deploy

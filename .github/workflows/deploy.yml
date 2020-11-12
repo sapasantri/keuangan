@@ -58,7 +58,9 @@ jobs:
         uses: shivammathur/setup-php@master
         with:
           php-version: 7.4
-          extensions: mbstring, bmath
+          extensions: mbstring
+      - name: Cek Path
+          run: pwd
       - name: Composer install
         run: composer install
       - name: Setup Deployer
