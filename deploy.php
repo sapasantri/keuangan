@@ -6,7 +6,7 @@ namespace Deployer;
 require 'recipe/laravel.php';
 require 'recipe/rsync.php';
 
-set('application', 'keuangan');
+set('application', '');
 set('ssh_multiplexing', true); // Speed up deployment
 
 set('rsync_src', function () {
