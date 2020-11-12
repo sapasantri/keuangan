@@ -27,7 +27,7 @@ add('rsync', [
     ],
 ]);
 
-// Set up a deployer task to copy secrets from directory env to /var/www/nama-laravel-project in server.
+// Set up a deployer task to copy secrets from directory env to /var/www/keuangan in server.
 task('deploy:secrets', function () {
     run('cp $HOME/env/keuangan/production/.env {{deploy_path}}/shared');
 });
@@ -38,7 +38,7 @@ host('production.app.com') // Name of the server
     ->hostname('http://103.153.2.159') // Hostname or IP address
     ->stage('production') // Deployment stage (production, staging, etc)
     ->user('deployer') // SSH user
-    ->set('deploy_path', '/var/www/nama-laravel-project') // Deploy path
+    ->set('deploy_path', '/var/www/keuangan') // Deploy path
     ->set('http_user', 'www-data');
 
 after('deploy:failed', 'deploy:unlock'); // Unlock after failed deploy
